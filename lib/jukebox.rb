@@ -10,3 +10,11 @@ songs = [
   "Amos Lee - Keep It Loose, Keep It Tight"
 ]
 
+def day_hello(name)
+  "Hi #{name}!"
+end
+
+puts "Enter your name:"
+users_name = gets.chomp
+
+puts say_hello(users_name)
