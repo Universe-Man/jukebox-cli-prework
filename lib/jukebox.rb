@@ -29,7 +29,7 @@ end
 def play(songs)
   puts "Please enter a song name or number:"
   usersInput = gets.chomp
-  binding.pry
+#  binding.pry
   songs.each_with_index do |song, index|
     if usersInput == song
       puts "Playing #{song}"
