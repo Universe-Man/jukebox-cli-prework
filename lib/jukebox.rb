@@ -31,7 +31,8 @@ def play(songs)
   usersInput = gets.chomp
 #  binding.pry
   songs.each_with_index do |song, index|
-    if usersInput == song || usersInput == index + 1
+    i = index.to_i
+    if usersInput == song || usersInput == i + 1
       puts "Playing #{song}"
     else
       puts "Invalid input, please try again"
