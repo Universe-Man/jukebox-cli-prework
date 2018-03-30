@@ -13,7 +13,6 @@ songs = [
 ]
 
 def help
-  binding.pry
   puts "I accept the following commands:
   - help : displays this help message
   - list : displays a list of songs you can play
