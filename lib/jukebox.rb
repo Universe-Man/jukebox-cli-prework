@@ -27,19 +27,17 @@ def list(songs)
 end
 
 def play(songs)
+  songNumberArray = (1..9).to_a
   puts "Please enter a song name or number:"
   usersInput = gets.chomp
-  #binding.pry
-  songs.each_with_index do |song, index|
-  #  binding.pry
-    i = index.to_i
-    if usersInput == song || usersInput == i + 1
-      puts "Playing #{song}"
-    else
+  if songNumberArray.include?(usersInput.to_i)
+    puts "Playing #{songs[usersInput.to_i - 1]}"
+  elsif songs.include?(usersInput)
+    puts "Playing #{usersInput}"
+  else
       puts "Invalid input, please try again"
     end
   end
-  #binding.pry
 end
 
 def exit_jukebox
