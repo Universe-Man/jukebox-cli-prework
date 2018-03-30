@@ -27,17 +27,14 @@ def list(songs)
 end
 
 def play(songs)
+  binding.pry
   puts "Please enter a song name or number:"
   usersInput = gets.chomp
   songs.each_with_index do |song, index|
-    binding.pry
     if usersInput == song || usersInput == index + 1
-      binding.pry
       puts "Playing #{song}"
     else
-      binding.pry
       puts "Invalid input, please try again"
     end
-    binding.pry
   end
 end
